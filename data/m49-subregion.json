@@ -1,0 +1,87 @@
+[
+    {
+        "code": 15,
+        "name": "Northern Africa",
+        "region": 2
+    },
+    {
+        "code": 202,
+        "name": "Sub-Saharan Africa",
+        "region": 2
+    },
+    {
+        "code": 21,
+        "name": "Northern America",
+        "region": 19
+    },
+    {
+        "code": 419,
+        "name": "Latin America and the Caribbean",
+        "region": 19
+    },
+    {
+        "code": 30,
+        "name": "Eastern Asia",
+        "region": 142
+    },
+    {
+        "code": 34,
+        "name": "Southern Asia",
+        "region": 142
+    },
+    {
+        "code": 35,
+        "name": "South-eastern Asia",
+        "region": 142
+    },
+    {
+        "code": 143,
+        "name": "Central Asia",
+        "region": 142
+    },
+    {
+        "code": 145,
+        "name": "Western Asia",
+        "region": 142
+    },
+    {
+        "code": 39,
+        "name": "Southern Europe",
+        "region": 150
+    },
+    {
+        "code": 151,
+        "name": "Eastern Europe",
+        "region": 150
+    },
+    {
+        "code": 154,
+        "name": "Northern Europe",
+        "region": 150
+    },
+    {
+        "code": 155,
+        "name": "Western Europe",
+        "region": 150
+    },
+    {
+        "code": 53,
+        "name": "Australia and New Zealand",
+        "region": 9
+    },
+    {
+        "code": 54,
+        "name": "Melanesia",
+        "region": 9
+    },
+    {
+        "code": 57,
+        "name": "Micronesia",
+        "region": 9
+    },
+    {
+        "code": 61,
+        "name": "Polynesia",
+        "region": 9
+    }
+]
