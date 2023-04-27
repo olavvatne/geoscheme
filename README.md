@@ -7,8 +7,8 @@ GeoJson based on United Nations Geoscheme. The regions include land area and EEZ
 * In QGIS open **Filter** for layer **EZ_Land_v3_202030**
 * Filter layer by `UN_TER1`. Get list of M49 codes for region from json file found at **data/json**, or use the curated snippets below
 * Save filtered layer to new `GeoJson` layer with data duplication: `Layer | Save As...` 
-* Select everything in new layer, and first merge `Edit | Edit Geometry | Merge Selected Features...`, optionally `Vector | Geospatial tools | Buffer` with Selected features only and Dissolve results checked, segments to 1 and distance to 0 and apply, then simplify `Edit | Edit Geometry | Simplify...` (Select tool and click polygon). Use **Simplify by area** with tolerance of **0.5** (**0.25** for less jagged results)
-* When using tolerances of 0.25, buffer the perimeter by distance of 0.05 and 1 segment.
+* Select everything in new layer, and first merge `Edit | Edit Geometry | Merge Selected Features...`, optionally `Vector | Geospatial tools | Buffer` with Selected features only and Dissolve results checked, segments to 1 and distance to 0 and apply, then simplify `Edit | Edit Geometry | Simplify...` (Select tool and click polygon). Use **Simplify by area** with tolerance of **0.5** (**0.15** for less jagged results)
+* When using tolerances of 0.5, buffer the perimeter by distance of 0.05 and 1 segment.
 * Remove properties from merged GeoJson objects
 ## Curated Queries
 A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two sources with each other.
