@@ -7,8 +7,9 @@ GeoJson based on United Nations Geoscheme. The regions include land area and EEZ
 * In QGIS open **Filter** for layer **EZ_Land_v3_202030**
 * Filter layer by `UN_TER1`. Get list of M49 codes for region from json file found at **data/json**, or use the curated snippets below
 * Save filtered layer to new `GeoJson` layer with data duplication: `Layer | Save As...` 
-* Select everything in new layer, and first merge `Edit | Edit Geometry | Merge Selected Features...`, then simplify `Edit | Edit Geometry | Simplify...` (Select tool and click polygon). Use **Simplify by area** with tolerance of **0.25**
-
+* Select everything in new layer, and first merge `Edit | Edit Geometry | Merge Selected Features...`, optionally `Vector | Geospatial tools | Buffer` with Selected features only and Dissolve results checked, segments to 1 and distance to 0 and apply, then simplify `Edit | Edit Geometry | Simplify...` (Select tool and click polygon). Use **Simplify by area** with tolerance of **0.5** (**0.25** for less jagged results)
+* When using tolerances of 0.25, buffer the perimeter by distance of 0.05 and 1 segment.
+* Remove properties from merged GeoJson objects
 ## Curated Queries
 A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two sources with each other.
 
@@ -19,17 +20,17 @@ A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two s
 
 ### Asia
 ```sql
-"UN_TER1" IN (31, 51, 48, 50, 104, 96, 116, 144, 156, 4, 64, 196, 268, 356, 364, 376, 368, 392, 400, 417, 408, 410, 414, 398, 418, 422, 496, 512, 462, 458, 344, 446, 275, 524, 586, 634, 608, 682, 702, 760, 764, 762, 792, 795, 860, 704, 887, 360, 784, 626)
+"UN_SOV1" = 356 OR "UN_TER1" IN (31, 51, 48, 50, 104, 96, 116, 144, 156, 4, 64, 196, 268, 356, 364, 376, 368, 392, 400, 417, 408, 410, 414, 398, 418, 422, 496, 512, 462, 458, 344, 446, 275, 524, 586, 634, 608, 682, 702, 760, 764, 762, 792, 795, 860, 704, 887, 360, 784, 626, 158)
 ```
 
 ### Americas
 ```sql
-"UN_SOV1" = 152 OR "UN_SOV1" = 218 OR "UN_SOV1" = 840 OR "UN_TER1" IN (28,32,52,60,44,84,68,76,124,152,136,170,188,192,212,214,218,222,254,238,308,304,320,328,332,340,388,474,500,484,533,660,740,558,600,604,591,630,659,662,780,840,858,670,862,92,850,312,530,666)
+"MRGID_EEZ" = 8401 OR "UN_SOV1" = 76 OR "UN_SOV1" = 170 OR "UN_SOV1" = 332 OR "UN_SOV1" = 152 OR "UN_SOV1" = 218 OR "UN_SOV1" = 840 OR "UN_TER1" IN (28,32,52,60,44,84,68,76,124,152,136,170,188,192,212,214,218,222,254,238,308,304,320,328,332,340,388,474,500,484,533,660,740,558,600,604,591,630,659,662,780,840,858,670,862,92,850,312,530,666,796,535)
 ```
 
 ### Oceania
 ```sql
-"UN_SOV1" = 36 OR "UN_TER1" IN (16,36,90,184,242,583,258,316,296,540,570,580,574,548,520,554,598,772,776,798,876,882,612,585,584)
+"MRGID_EEZ" = 48948 OR  "UN_SOV1" = 36 OR "UN_TER1" IN (16,36,90,184,242,583,258,316,296,540,570,580,574,548,520,554,598,772,776,798,876,882,612,585,584)
 ```
 
 ### Africa
