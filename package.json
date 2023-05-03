@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clip": "scripts/regions-clip.js",
-    "convex": "scripts/regions-convex.js"
+    "convex": "scripts/regions-180th-meridian-convex.js"
   },
   "repository": {
     "type": "git",

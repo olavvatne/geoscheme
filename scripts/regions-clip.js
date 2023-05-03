@@ -19,6 +19,6 @@ if (!lstatSync(p).isFile() || extname(p) !== ".geojson") {
 }
 
 const data = JSON.parse(readFileSync(p));
-var bbox = [-180, -90, 180, 90];
+var bbox = [-179.9,-89.9, 179.9, 89.9];
 const result = bboxClip(data.features[0], bbox);
 writeFileSync('temp-convex.geojson', JSON.stringify(result));

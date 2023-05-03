@@ -3,7 +3,7 @@ GeoJson based on United Nations Geoscheme. The regions include land area and EEZ
 
 ![Preview](/docs/geojson-preview.png)
 
-## Recipe
+## Recipe - Create Regions
 * In QGIS open **Filter** for layer **EZ_Land_v3_202030**
 * Filter layer by `UN_TER1`. Get list of M49 codes for region from json file found at **data/json**, or use the curated snippets below
 * Save filtered layer to new `GeoJson` layer with data duplication: `Layer | Save As...` 
@@ -43,9 +43,10 @@ A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two s
 "MRGID_EEZ" = 8489
 ```
 
-* Create convex hull polygons by:
+## Recipe - Convex Hull of Regions
+Create convex hulls that are derived from regions:
 ```
-npm scripts/regions-convex.js "/data/geojson/africa-hr.geojson"
+npm run convex "/data/geojson/africa-hr.geojson"
 ```
 
 ## License
