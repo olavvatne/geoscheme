@@ -1,0 +1,31 @@
+{
+  "name": "geoscheme",
+  "version": "0.1.0",
+  "description": "Geoscheme GeoJson",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "clip": "scripts/regions-clip.js",
+    "convex": "scripts/regions-convex.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olavvatne/geoscheme.git"
+  },
+  "keywords": [
+    "GeoJson"
+  ],
+  "author": "Olav Vatne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olavvatne/geoscheme/issues"
+  },
+  "homepage": "https://github.com/olavvatne/geoscheme#readme",
+  "devDependencies": {
+    "@turf/bbox-clip": "^6.5.0",
+    "@turf/convex": "^6.5.0"
+  },
+  "type": "module"
+}

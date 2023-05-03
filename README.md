@@ -42,6 +42,12 @@ A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two s
 ```sql
 "MRGID_EEZ" = 8489
 ```
+
+* Create convex hull polygons by:
+```
+npm scripts/regions-convex.js "/data/geojson/africa-hr.geojson"
+```
+
 ## License
 Data → [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 Scripts → [MIT](https://opensource.org/license/mit/)

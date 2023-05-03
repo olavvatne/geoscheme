@@ -4,3 +4,6 @@ EEZ_land_union_v3_202003
 *.qmd
 *.qgs~
 geoscheme_attachments.zip
+
+node_modules
+temp-convex.geojson
