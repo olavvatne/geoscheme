@@ -27,9 +27,13 @@ const p = args[0]
 if (!lstatSync(p).isFile() || extname(p) !== ".geojson") {
     throw Error("Not a geojson file")
 }
+
+let outputName = p.replace("-hr", "");
+outputName = outputName.replace(".geojson", "");
+outputName = outputName + "-convex.geojson";
 // TODO: find a vertical line not occupied automatically
 // all -40, except americas +40
-const splitLine = 40;
+const splitLine = -40;
 const allBbox = [-179.9,-90, 179.9, 90];
 const data = JSON.parse(readFileSync(p));
 const clipped = bboxClip(data.features[0], allBbox);
@@ -54,4 +58,4 @@ if (rightResult) {
     mp.push(rightCoords);
 }
     const result = multiPolygon(mp);
-writeFileSync('temp-convex.geojson', JSON.stringify(result));
+writeFileSync(outputName, JSON.stringify(result));
