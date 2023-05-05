@@ -1,0 +1,12 @@
+{
+    "code": 21,
+    "name": "Northern America",
+    "parent": 19,
+    "areas": [
+        60,
+        124,
+        304,
+        840,
+        666
+    ]
+}

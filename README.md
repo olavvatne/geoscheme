@@ -43,6 +43,8 @@ A combination of `UN_TER1` and some assorted missing `UN_SOV1`. Aligns the two s
 "MRGID_EEZ" = 8489
 ```
 
+### Subregions
+[See QUERIES](./QUERIES.md)
 ## Recipe - Convex Hull of Regions
 Create convex hulls that are derived from regions:
 ```
