@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUser="OVATN" saveDateTime="2023-05-05T14:20:18" version="3.30.1-'s-Hertogenbosch" saveUserFull="Olav Kåre Vatne" projectname="">
+<qgis saveUser="OVATN" saveDateTime="2023-05-05T16:27:56" version="3.30.1-'s-Hertogenbosch" saveUserFull="Olav Kåre Vatne" projectname="">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -22,6 +22,11 @@
     <customproperties>
       <Option/>
     </customproperties>
+    <layer-tree-layer legend_split_behavior="0" id="TM_WORLD_BORDERS_SIMPL_0_3_ffd93a9e_37f9_4432_92fe_432855a87826" providerKey="ogr" name="TM_WORLD_BORDERS_SIMPL-0.3" patch_size="-1,-1" expanded="1" checked="Qt::Checked" legend_exp="" source="../raw/TM_WORLD_BORDERS_SIMPL-0.3/TM_WORLD_BORDERS_SIMPL-0.3.shp">
+      <customproperties>
+        <Option/>
+      </customproperties>
+    </layer-tree-layer>
     <layer-tree-layer legend_split_behavior="0" id="africa_b0ca5fa9_78cb_4189_b66f_ce5e47371f70" providerKey="ogr" name="africa" patch_size="-1,-1" expanded="1" checked="Qt::Unchecked" legend_exp="" source="../geojson/africa.geojson">
       <customproperties>
         <Option/>
@@ -267,11 +272,6 @@
         </customproperties>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer legend_split_behavior="0" id="TM_WORLD_BORDERS_SIMPL_0_3_ffd93a9e_37f9_4432_92fe_432855a87826" providerKey="ogr" name="TM_WORLD_BORDERS_SIMPL-0.3" patch_size="-1,-1" expanded="1" checked="Qt::Unchecked" legend_exp="" source="../raw/TM_WORLD_BORDERS_SIMPL-0.3/TM_WORLD_BORDERS_SIMPL-0.3.shp">
-      <customproperties>
-        <Option/>
-      </customproperties>
-    </layer-tree-layer>
     <layer-tree-layer legend_split_behavior="0" id="EEZ_Land_v3_202030_9531feee_c349_4f87_885e_a06ad35d5d12" providerKey="ogr" name="EEZ_Land_v3_202030" patch_size="-1,-1" expanded="1" checked="Qt::Checked" legend_exp="" source="../raw/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp|subset=&quot;UN_TER1&quot; IN (16,184,258,570,772,776,798,876,882,612)&#xa;">
       <customproperties>
         <Option/>
@@ -405,6 +405,11 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" open="true" name="TM_WORLD_BORDERS_SIMPL-0.3" showFeatureCount="0" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="TM_WORLD_BORDERS_SIMPL_0_3_ffd93a9e_37f9_4432_92fe_432855a87826" visible="1"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" name="africa" showFeatureCount="0" checked="Qt::Unchecked">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="africa_b0ca5fa9_78cb_4189_b66f_ce5e47371f70" visible="0"/>
@@ -635,11 +640,6 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendlayer drawingOrder="-1" open="true" name="TM_WORLD_BORDERS_SIMPL-0.3" showFeatureCount="0" checked="Qt::Unchecked">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="TM_WORLD_BORDERS_SIMPL_0_3_ffd93a9e_37f9_4432_92fe_432855a87826" visible="0"/>
-      </filegroup>
-    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" name="EEZ_Land_v3_202030" showFeatureCount="0" checked="Qt::Checked">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="EEZ_Land_v3_202030_9531feee_c349_4f87_885e_a06ad35d5d12" visible="1"/>
@@ -1650,7 +1650,7 @@ To create sovereign areas for each country.</abstract>
             <layer id="{d790ca18-fb5f-40c6-9895-f2e064f8922d}" enabled="1" locked="0" class="SimpleFill" pass="0">
               <Option type="Map">
                 <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
-                <Option type="QString" name="color" value="118,120,117,255"/>
+                <Option type="QString" name="color" value="118,120,117,0"/>
                 <Option type="QString" name="joinstyle" value="bevel"/>
                 <Option type="QString" name="offset" value="0,0"/>
                 <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
@@ -20423,7 +20423,7 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings destinationLayer="africa_hr_ef55aa04_428b_4aed_90ac_93bf57d31943" destinationLayerName="africa-hr" autoCommitFeatures="0" autoAddTrackVertices="0" destinationFollowsActiveLayer="1" destinationLayerProvider="ogr" destinationLayerSource="/Users/OVATN/Developer/misc/geoscheme/data/geojson/africa-hr.geojson">
+  <ProjectGpsSettings destinationLayer="EEZ_Land_v3_202030_9531feee_c349_4f87_885e_a06ad35d5d12" destinationLayerName="EEZ_Land_v3_202030" autoCommitFeatures="0" autoAddTrackVertices="0" destinationFollowsActiveLayer="1" destinationLayerProvider="ogr" destinationLayerSource="/Users/OVATN/Developer/misc/geoscheme/data/raw/EEZ_land_union_v3_202003/EEZ_Land_v3_202030.shp|subset=&quot;UN_TER1&quot; IN (16,184,258,570,772,776,798,876,882,612)&#xa;">
     <timeStampFields/>
   </ProjectGpsSettings>
 </qgis>
